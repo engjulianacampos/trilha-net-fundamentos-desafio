@@ -4,40 +4,87 @@
 using ExemploExplorando.Models;
 using System.Globalization;
 
+int numero=10;
+bool ehPar=false;
+
+//Operador Ternário
+ehPar = numero % 2==0;
+
+Console.WriteLine("Número é " + (ehPar ? "par" : "ímpar"));
+
+// if (numero % 2 ==0)
+// {
+//     Console.WriteLine("Número par");
+// }
+// else
+// {
+//     Console.WriteLine("Número ímpar");
+// }
+
+// Pessoa p1=new Pessoa("João", "Silva");
+// (string nome, string sobrenome)=p1;
+
+// Console.WriteLine($"{nome} {sobrenome}");
 
 
-Dictionary<string, string> estados = new Dictionary<string, string>();
-estados.Add("SP", "São Paulo");
-estados.Add("RJ", "Rio de Janeiro");
-estados.Add("MG", "Minas Gerais");
 
-foreach (var item in estados)
-{
-    Console.WriteLine($"Chave: {item.Key}, Valor: {item.Value}");
-}
+// LeituraArquivo arquivo = new LeituraArquivo();
+// var (sucesso, linhasArquivo, _) = arquivo.LerArquivo("Arquivos/arquivoLeitura.txt");
 
-estados.Remove("MG");
-estados["RJ"] = "Rio de Janeiro - RJ alterado";
+// if (sucesso)
+// {
+//     //Console.WriteLine($"Quantidade de linhas do arquivo: {quantidade}");
+//     foreach (var linha in linhasArquivo)
+//     {
+//         Console.WriteLine(linha);
+//     }
+// }
+// else
+// {
+//     Console.WriteLine("Não foi possível ler o arquivo.");
+// }
 
-Console.WriteLine("----------------------");
+// (int, string, string, decimal) tupla = (1, "Juliana", "Campos", 1.70m);
+// //ValueTuple<int, string, string, decimal> tuplaValor = (2, "João", "Silva", 1.80m);
+// var outraTupla = Tuple.Create(3, "Ana", "Oliveira", 1.65m);
 
-foreach (var item in estados)
-{
-    Console.WriteLine($"Chave: {item.Key}, Valor: {item.Value}");
-}
+// Console.WriteLine($"Id:{tupla.Item1}");
+// Console.WriteLine($"Nome:{tupla.Item2}");
+// Console.WriteLine($"Sobrenome:{tupla.Item3}");
+// Console.WriteLine($"Altura:{tupla.Item4}");
 
-string chave="SP";
-Console.WriteLine($"Verificando a existência da chave {chave} no dicionário:");
-if (estados.ContainsKey(chave))
-{
-    Console.WriteLine($"O dicionário contém a chave {chave}.");
-}
-else
-{
-    Console.WriteLine($"O dicionário não contém a chave {chave}.");
-}
+// Dictionary<string, string> estados = new Dictionary<string, string>();
+// estados.Add("SP", "São Paulo");
+// estados.Add("RJ", "Rio de Janeiro");
+// estados.Add("MG", "Minas Gerais");
 
-Console.WriteLine(estados["RJ"]);
+// foreach (var item in estados)
+// {
+//     Console.WriteLine($"Chave: {item.Key}, Valor: {item.Value}");
+// }
+
+// estados.Remove("MG");
+// estados["RJ"] = "Rio de Janeiro - RJ alterado";
+
+// Console.WriteLine("----------------------");
+
+// foreach (var item in estados)
+// {
+//     Console.WriteLine($"Chave: {item.Key}, Valor: {item.Value}");
+// }
+
+// string chave="SP";
+// Console.WriteLine($"Verificando a existência da chave {chave} no dicionário:");
+// if (estados.ContainsKey(chave))
+// {
+//     Console.WriteLine($"O dicionário contém a chave {chave}.");
+// }
+// else
+// {
+//     Console.WriteLine($"O dicionário não contém a chave {chave}.");
+// }
+
+// Console.WriteLine(estados["RJ"]);
 
 
 // Stack<int> pilha = new Stack<int>();

@@ -35,6 +35,12 @@ namespace ExemploExplorando.Models
 
         public string NomeCompleto { get => $"{Nome} {Sobrenome}".ToUpper(); }
 
+        public void Deconstruct(out string nome, out string sobrenome)
+        {
+            nome = Nome;
+            sobrenome = Sobrenome;
+        }
+
         public int Idade { get => _idade; 
         set{
             if (value < 0)
